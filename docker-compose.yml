@@ -1,0 +1,23 @@
+
+services:
+  jupyter:
+    container_name: devenv-jupyter
+    build:
+      context: .
+      dockerfile: ./docker/jupyter/Dockerfile
+    volumes:
+      - ./work:/home/jovyan/work
+    ports:
+      - 8888:8888
+    command: "start-notebook.sh --NotebookApp.token="
+
+  mssql-2022:
+    container_name: mssql-2022
+    build:
+      context: .
+      dockerfile: ./docker/mssql/Dockerfile
+    ports:
+      - '1433:1433'
+    environment:
+      SA_PASSWORD: ""
+      ACCEPT_EULA: "Y"
