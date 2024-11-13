@@ -12,3 +12,4 @@ http://127.0.0.1:8888/lab
 Oracle SQL Developer
 https://stackoverflow.com/questions/52926535/connect-oracle-sql-developer-to-microsoft-sql-server-2017
 
+git push https://srideepo@github.com/srideepo/devenv.git main
